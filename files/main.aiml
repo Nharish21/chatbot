@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+<!--WILDCARD
 <category>
-    <patern>*</patern>
+    <pattern>*</pattern>
     <template> <star /></template>
-</category>
+</category>-->
 <category>
     <pattern>WHAT IS YOUR NAME</pattern>
     <template>MY NAME IS HARI</template>
+</category>
+<category>
+    <pattern>WHAT IS AIML</pattern>
+    <template>ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</template>
+</category>
+<!-- SRAI
+<category>
+    <pattern> TELL ME WHAT * IS</pattern>
+    <template><srai>WHAT IS<star /></srai></template>
+</category>-->
+<category>
+    <pattern>TELL ME MORE</pattern>
+    <that>MY NAME IS HARI</that>
+    <template>THERE IS NOTHING TO SAY
+    </template>
+</category>
+<category>
+    <pattern>TELL ME MORE</pattern>
+    <that>ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</that>
+    <template>IT IS USED TO MAKE CHATBOT</template>
+</category>
+<!-- random number generator
+<category>
+    <pattern>PICK A NUMBER</pattern>
+    <template>
+        <random>
+            <li>ONE</li>
+            <li>TWO</li>
+            <li>THREE</li>
+        </random>
+    </template>
+</category>-->
+<category>
+    <pattern>MY NAME IS *</pattern>
+    <TEMPLATE>HI <set name="username"><star /></set></TEMPLATE>
 </category>
 </aiml>
