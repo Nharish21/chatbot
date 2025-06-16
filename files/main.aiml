@@ -42,6 +42,48 @@
 </category>-->
 <category>
     <pattern>MY NAME IS *</pattern>
-    <TEMPLATE>HI <set name="username"><star /></set></TEMPLATE>
+    <template>HI <set name="username"><star /></set></template>
 </category>
+<category>
+    <pattern>WHAT IS MY NAME</pattern>
+    <template>YOUR NAME IS <get name ="username"/></template>
+</category>
+<category>
+    <pattern>WHERE IS *</pattern>
+    <template>
+        <think><set name= "state"><star /></set></think>
+        <condition name = "state" value ="england">ENGLAND IS IN EUROPE</condition>
+        <condition name = "state" value ="brazil">brazil is in south africa</condition>
+    </template>
+</category>
+<category>
+    <pattern>dogs</pattern>
+    <template><think><set name="topic">dogs</set></think>
+    yes lets discuss about dogs</template>
+</category>
+<category>
+    <pattern>cat</pattern>
+    <template><think><set name="topic">cat</set></think>
+    yes lets discuss about cats</template>
+</category>
+<topic name="dogs">
+    <category>
+        <pattern>
+            dogs are good
+        </pattern>
+        <template>
+            good souls
+        </template>
+    </category>
+</topic>
+<topic name="cat">
+    <category>
+        <pattern>
+            cats are nice
+        </pattern>
+        <template>
+            good to play
+        </template>
+    </category>
+</topic>
 </aiml>
